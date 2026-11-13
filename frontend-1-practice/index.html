@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Барбершоп — Выбор времени</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <a href="#" class="header__logo">Barbershop</a>
+      <nav class="header__nav">
+        <a href="#" class="header__link">Услуги</a>
+        <a href="#" class="header__link">Мастера</a>
+        <a href="#" class="header__link">Контакты</a>
+      </nav>
+      <a href="tel:+79990000000" class="header__phone">+7 (999) 123-45-67</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="main__container">
+      <div class="steps">
+        <div class="steps__item steps__item--done"><span class="steps__icon">✓</span> Услуга</div>
+        <div class="steps__line"></div>
+        <div class="steps__item steps__item--done"><span class="steps__icon">✓</span> Мастер</div>
+        <div class="steps__line"></div>
+        <div class="steps__item steps__item--active"><span class="steps__icon">3</span> Время</div>
+      </div>
+
+      <h1 class="page-title">Выбор даты и времени</h1>
+
+      <div class="booking-grid">
+        <section class="calendar">
+          <div class="calendar__header">
+            <button class="calendar__arrow" type="button">←</button>
+            <span class="calendar__month">Октябрь 2026</span>
+            <button class="calendar__arrow" type="button">→</button>
+          </div>
+          <div class="calendar__weekdays">
+            <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+          </div>
+          <div class="calendar__days">
+            <span class="calendar__day calendar__day--empty"></span>
+            <span class="calendar__day calendar__day--empty"></span>
+            <button class="calendar__day" type="button">1</button>
+            <button class="calendar__day" type="button">2</button>
+            <button class="calendar__day" type="button">3</button>
+            <button class="calendar__day" type="button">4</button>
+            <button class="calendar__day" type="button">5</button>
+            <button class="calendar__day" type="button">6</button>
+            <button class="calendar__day" type="button">7</button>
+            <button class="calendar__day" type="button">8</button>
+            <button class="calendar__day" type="button">9</button>
+            <button class="calendar__day" type="button">10</button>
+            <button class="calendar__day" type="button">11</button>
+            <button class="calendar__day calendar__day--selected" type="button">12</button>
+            <button class="calendar__day" type="button">13</button>
+            <button class="calendar__day" type="button">14</button>
+            <button class="calendar__day" type="button">15</button>
+            <button class="calendar__day" type="button">16</button>
+            <button class="calendar__day" type="button">17</button>
+            <button class="calendar__day" type="button">18</button>
+            <button class="calendar__day" type="button">19</button>
+            <button class="calendar__day" type="button">20</button>
+            <button class="calendar__day" type="button">21</button>
+            <button class="calendar__day" type="button">22</button>
+            <button class="calendar__day" type="button">23</button>
+            <button class="calendar__day" type="button">24</button>
+            <button class="calendar__day" type="button">25</button>
+            <button class="calendar__day" type="button">26</button>
+            <button class="calendar__day" type="button">27</button>
+            <button class="calendar__day" type="button">28</button>
+            <button class="calendar__day" type="button">29</button>
+            <button class="calendar__day" type="button">30</button>
+            <button class="calendar__day" type="button">31</button>
+          </div>
+        </section>
+
+        <section class="slots">
+          <h2 class="slots__title">Свободное время</h2>
+          <div class="slots__grid">
+            <button class="slot" type="button">10:00</button>
+            <button class="slot" type="button">10:30</button>
+            <button class="slot slot--busy" type="button" disabled>11:00</button>
+            <button class="slot" type="button">11:30</button>
+            <button class="slot" type="button">12:00</button>
+            <button class="slot" type="button">12:30</button>
+            <button class="slot slot--busy" type="button" disabled>13:00</button>
+            <button class="slot" type="button">13:30</button>
+            <button class="slot" type="button">14:00</button>
+            <button class="slot" type="button">14:30</button>
+            <button class="slot" type="button">15:00</button>
+            <button class="slot" type="button">15:30</button>
+          </div>
+          <button class="btn-primary" type="button">Далее</button>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__logo">Barbershop</div>
+      <div class="footer__links"><a href="#">Политика конфиденциальности</a><a href="#">Оферта</a></div>
+      <div class="footer__socials"><a href="#">VK</a><a href="#">TG</a></div>
+    </div>
+  </footer>
+</body>
+</html>
