@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Барбершоп — Выбор времени</title>
+  <!-- ТЕПЕРЬ ПУТЬ ВЕДЕТ НА styles.css -->
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 </head>
@@ -11,17 +12,25 @@
   <header class="header">
     <div class="header__container">
       <a href="#" class="header__logo">Barbershop</a>
+      
+      <!-- Мобильное меню (гамбургер) -->
+      <input type="checkbox" id="menu-toggle" class="header__menu-toggle">
+      <label for="menu-toggle" class="header__burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </label>
+
       <nav class="header__nav">
         <a href="#" class="header__link">Услуги</a>
         <a href="#" class="header__link">Мастера</a>
         <a href="#" class="header__link">Контакты</a>
+        <a href="tel:+79990000000" class="header__phone">+7 (999) 123-45-67</a>
       </nav>
-      <a href="tel:+79990000000" class="header__phone">+7 (999) 123-45-67</a>
     </div>
   </header>
 
   <main class="main">
     <div class="main__container">
+      <!-- Индикатор шагов -->
       <div class="steps">
         <div class="steps__item steps__item--done"><span class="steps__icon">✓</span> Услуга</div>
         <div class="steps__line"></div>
@@ -33,18 +42,27 @@
       <h1 class="page-title">Выбор даты и времени</h1>
 
       <div class="booking-grid">
+        <!-- КАЛЕНДАРЬ -->
         <section class="calendar">
           <div class="calendar__header">
-            <button class="calendar__arrow" type="button">←</button>
-            <span class="calendar__month">Октябрь 2026</span>
-            <button class="calendar__arrow" type="button">→</button>
+            <!-- Добавлены aria-label -->
+            <button class="calendar__arrow" type="button" aria-label="Предыдущий месяц">←</button>
+            <!-- Теперь это заголовок h2 -->
+            <h2 class="calendar__month">Ноябрь 2026</h2>
+            <button class="calendar__arrow" type="button" aria-label="Следующий месяц">→</button>
           </div>
           <div class="calendar__weekdays">
             <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
           </div>
           <div class="calendar__days">
+            <!-- ИСПРАВЛЕНО: 1 ноября 2026 — это воскресенье, поэтому нужно 6 пустых ячеек (Пн-Сб) -->
             <span class="calendar__day calendar__day--empty"></span>
             <span class="calendar__day calendar__day--empty"></span>
+            <span class="calendar__day calendar__day--empty"></span>
+            <span class="calendar__day calendar__day--empty"></span>
+            <span class="calendar__day calendar__day--empty"></span>
+            <span class="calendar__day calendar__day--empty"></span>
+            
             <button class="calendar__day" type="button">1</button>
             <button class="calendar__day" type="button">2</button>
             <button class="calendar__day" type="button">3</button>
@@ -56,8 +74,8 @@
             <button class="calendar__day" type="button">9</button>
             <button class="calendar__day" type="button">10</button>
             <button class="calendar__day" type="button">11</button>
-            <button class="calendar__day calendar__day--selected" type="button">12</button>
-            <button class="calendar__day" type="button">13</button>
+            <button class="calendar__day" type="button">12</button>
+            <button class="calendar__day calendar__day--selected" type="button">13</button>
             <button class="calendar__day" type="button">14</button>
             <button class="calendar__day" type="button">15</button>
             <button class="calendar__day" type="button">16</button>
@@ -75,10 +93,10 @@
             <button class="calendar__day" type="button">28</button>
             <button class="calendar__day" type="button">29</button>
             <button class="calendar__day" type="button">30</button>
-            <button class="calendar__day" type="button">31</button>
           </div>
         </section>
 
+        <!-- СЛОТЫ -->
         <section class="slots">
           <h2 class="slots__title">Свободное время</h2>
           <div class="slots__grid">
@@ -90,7 +108,8 @@
             <button class="slot" type="button">12:30</button>
             <button class="slot slot--busy" type="button" disabled>13:00</button>
             <button class="slot" type="button">13:30</button>
-            <button class="slot" type="button">14:00</button>
+            <!-- ВЫБРАННОЕ ВРЕМЯ -->
+            <button class="slot slot--selected" type="button">14:00</button>
             <button class="slot" type="button">14:30</button>
             <button class="slot" type="button">15:00</button>
             <button class="slot" type="button">15:30</button>
@@ -100,11 +119,19 @@
       </div>
     </div>
   </main>
+
+  <!-- Подвал как в макете -->
   <footer class="footer">
     <div class="footer__container">
       <div class="footer__logo">Barbershop</div>
-      <div class="footer__links"><a href="#">Политика конфиденциальности</a><a href="#">Оферта</a></div>
-      <div class="footer__socials"><a href="#">VK</a><a href="#">TG</a></div>
+      <div class="footer__links">
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Оферта</a>
+      </div>
+      <div class="footer__socials">
+        <a href="#">VK</a>
+        <a href="#">TG</a>
+      </div>
     </div>
   </footer>
 </body>
